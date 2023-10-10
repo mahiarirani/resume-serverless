@@ -1,0 +1,21 @@
+---
+title: Mahyar Iranibazaz
+subtitle: Resume
+---
+<!DOCTYPE html>
+<html lang="en" data-lt-installed="true">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | url }}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>{{ title }} | {{ eleventyNavigation.title or subtitle }}</title>
+</head>
+<body class="bg-gray-100 antialiased">
+<main class="container mx-auto p-4 sm:px-5 md:my-5 max-w-full lg:max-w-5xl">
+  {{ content | safe }}
+  {% include 'components/footer.njk' %}
+</main>
+</body>
+</html>

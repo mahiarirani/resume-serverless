@@ -1,0 +1,42 @@
+- name: QuantumBlox
+  category: Software
+  type: Open Source
+  icon:
+    name: bx-cube
+    color: text-green-800
+    background:
+      from: from-lime-100
+      to: to-green-300
+  description: >
+    QuantumBlox is a groundbreaking software suite that harnesses the power of quantum computing to solve complex problems in record time. With its intuitive interface and advanced algorithms, it's a game-changer for scientific research and optimization tasks.
+  skills:
+    - Quantum Computing
+    - Python
+    - Qiskit
+    - Quantum Algorithms
+  links:
+    - url: https://github.com/johndoe/QuantumBlox
+      title: johndoe/QuantumBlox
+      icon: bxl-github
+      color: gray
+- name: NebulaCraft
+  category: Game Development
+  type: Indie Project
+  icon:
+    name: bx-game
+    color: text-indigo-800
+    background:
+      from: from-purple-100
+      to: to-indigo-300
+  description: >
+    NebulaCraft is a captivating indie game that takes players on an interstellar adventure through a beautifully crafted universe. Dive into thrilling quests, build your spaceship, and explore the mysteries of the cosmos. Embark on a journey of a lifetime!
+  skills:
+    - Game Design
+    - Unity
+    - 3D Modeling
+    - C#
+  links:
+    - url: https://nebulacraft.com
+      title: NebulaCraft Official Website
+      icon: bx-globe
+      color: indigo

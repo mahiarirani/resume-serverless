@@ -1,0 +1,25 @@
+---
+layout: resume
+type: blog
+eleventyNavigation:
+  key: blog
+  title: Blog
+  order: 5
+---
+{% for post in collections.posts | reverse %}
+  {% set post = post.data %}
+  <a href="{{ post.title | slugify | url }}" class="inline-grid cursor-pointer w-full">
+    <article class="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden transition">
+      <div class="space-y-3 mb-5 p-7 pb-0">
+        <h2 class="text-lg font-semibold">{{ post.title }}</h2>
+        <p class="text-gray-600 line-clamp-6">{{ post.summary }}</p>
+        <p>
+          <time datetime="{{ post.date }}" class="text-sm text-gray-400">{{ post.date | simpleDate }}</time>
+        </p>
+      </div>
+      <div class="flex items-center max-h-80 overflow-hidden">
+        <img src="/assets/images/blog/{{ post.image.filename }}" alt="" class="object-cover object-center w-full h-full">
+      </div>
+    </article>
+  </a>
+{% endfor %}

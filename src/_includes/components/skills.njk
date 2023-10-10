@@ -1,0 +1,20 @@
+{% macro render(skills, tags) %}
+  <div class="-m-2 flex flex-wrap">
+    {% for skill in skills %}
+      {% if tags %}
+        {% set color = "" %}
+        {% for tag in tags %}
+          {% if tag.name == skill.tag %}
+            {% set color = tag.color %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <span class="bg-{{ color or "green" }}-100 text-{{ color or "green" }}-700 cursor-default rounded-lg m-1 px-2 py-1 flex align-middle space-x-1">
+        {% if skill.icon %}
+          <i class="bx {{ skill.icon }} text-lg before:align-text-top"></i>
+        {% endif %}
+        <span class="text-sm font-medium ">{{ skill.name or skill }}</span>
+      </span>
+    {% endfor %}
+  </div>
+{% endmacro %}

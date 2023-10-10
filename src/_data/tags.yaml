@@ -1,0 +1,23 @@
+---
+- name: language
+  color: green
+- name: framework
+  color: violet
+- name: library
+  color: red
+- name: tooling
+  color: orange
+- name: templating
+  color: lime
+- name: database
+  color: amber
+- name: concept
+  color: yellow
+- name: tool
+  color: pink
+- name: graphic
+  color: cyan
+- name: service
+  color: blue
+- name: os
+  color: sky

@@ -1,0 +1,119 @@
+- category: Back End
+  icon: bxs-cube
+  items:
+    - name: Python
+      tag: language
+      icon: bxl-python
+    - name: Django
+      icon: bxl-django
+      tag: framework
+    - name: Flask
+      icon: bxl-flask
+      tag: framework
+    - name: Node.js
+      tag: language
+      icon: bxl-nodejs
+    - name: Express.js
+      tag: framework
+- category: Front End
+  icon: bx-desktop
+  items:
+    - name: JavaScript
+      tag: language
+      icon: bxl-javascript
+    - name: React.js
+      tag: framework
+      icon: bxl-react
+    - name: Angular
+      tag: framework
+      icon: bxl-angular
+    - name: Vue.js
+      tag: framework
+      icon: bxl-vuejs
+    - name: jQuery
+      tag: library
+      icon: bxl-jquery
+- category: Database
+  icon: bxs-data
+  items:
+    - name: SQL
+      tag: language
+    - name: MySQL
+      tag: database
+    - name: PostgreSQL
+      tag: database
+    - name: MongoDB
+      tag: database
+    - name: Redis
+      tag: database
+- category: DevOps
+  icon: bxs-terminal
+  items:
+    - name: Linux
+      tag: os
+    - name: Bash
+      tag: scripting
+    - name: Docker
+      tag: tool
+      icon: bxl-docker
+    - name: Kubernetes
+      tag: tool
+    - name: Jenkins
+      tag: tool
+    - name: Git
+      tag: tool
+      icon: bxl-git
+- category: Front End
+  icon: bx-code
+  items:
+    - name: HTML
+      tag: language
+    - name: CSS
+      tag: language
+    - name: Sass
+      tag: language
+    - name: Bootstrap
+      tag: framework
+    - name: Materialize
+      tag: framework
+- category: Mobile App Development
+  icon: bx-mobile
+  items:
+    - name: React Native
+      tag: framework
+    - name: Flutter
+      tag: framework
+- category: Data Science
+  icon: bxs-data
+  items:
+    - name: Python
+      tag: language
+      icon: bxl-python
+    - name: Pandas
+      tag: library
+    - name: NumPy
+      tag: library
+    - name: Scikit-learn
+      tag: library
+    - name: TensorFlow
+      tag: library
+    - name: PyTorch
+      tag: library
+- category: Cloud Computing
+  icon: bx-cloud
+  items:
+    - name: AWS
+      tag: service
+      icon: bxl-aws
+    - name: Azure
+      tag: service
+      icon: bxl-azure
+    - name: Google Cloud
+      tag: service
+      icon: bxl-google-cloud
+    - name: Heroku
+      icon: bxl-heroku
+      tag: service
+    - name: Firebase
+      tag: service
+      icon: bxl-firebase

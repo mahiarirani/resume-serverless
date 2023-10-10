@@ -1,0 +1,52 @@
+---
+layout: resume
+type: section
+eleventyNavigation:
+  key: projects
+  title: Projects
+  order: 4
+---
+<h2 class="font-semibold text-xl mb-5">{{ eleventyNavigation.title }}</h2>
+{% for project in projects %}
+  <div class="sm:flex sm:justify-start sm:space-y-0 sm:space-x-4 space-y-4">
+    <div class="flex w-16 h-16 bg-gradient-to-br {{ project.icon.background.from }} {{ project.icon.background.to }} justify-center items-center rounded-xl">
+            <span class="w-16 text-3xl {{ project.icon.color }} text-center">
+              <i class="bx {{ project.icon.name }}"></i>
+            </span>
+    </div>
+    <div class="w-full space-y-5">
+      <div class="items-end sm:flex justify-between space-y-1">
+        <div class="space-y-2">
+          <div class="font-medium">{{ project.name }}</div>
+          <div class="flex space-x-5">
+            <div class="flex text-gray-600 items-center text-sm font-medium space-x-1.5">
+              <i class="bx bxs-category-alt"></i>
+              <span>{{ project.category }}</span>
+            </div>
+            <div class="flex text-green-600 items-center text-sm font-medium space-x-1.5">
+              <i class="bx bxs-lock-open-alt"></i>
+              <span>{{ project.type }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600">{{ project.description }}</p>
+      <div>
+        {% from 'components/skills.njk' import render %}
+        {{ render(project.skills) }}
+      </div>
+      <div class="space-x-2">
+        {% for link in project.links %}
+          <a href="{{ link.url }}" target="_blank"
+             class="flex w-fit cursor-pointer items-center space-x-3 px-3.5 py-1.5 rounded-lg group border border-{{ link.color }}-500 bg-white text-{{ link.color }}-500 text-sm font-medium transition duration-200 hover:border-{{ link.color }}-600 hover:text-white hover:bg-{{ link.color }}-600 group">
+            <i class="bx {{ link.icon }} text-lg text-{{ link.color }}-500 group-hover:text-white transition"></i>
+            <span>{{ link.title }}</span>
+          </a>
+        {% endfor %}
+      </div>
+      {% if not loop.last %}
+        <div class="border-b border-gray-200"></div>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}

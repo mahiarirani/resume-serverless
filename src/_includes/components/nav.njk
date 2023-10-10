@@ -1,0 +1,16 @@
+<nav>
+  <ul class="flex flex-wrap justify-evenly sm:justify-start space-x-2 sm:space-x-8 items-center font-medium">
+    {% set navs = collections.all | eleventyNavigation %}
+    {% for nav in navs %}
+      <li>
+        <a href="{{ nav.url | url }}"
+                {% if nav.url == page.url %}
+                  class="border-b-2 inline-flex pb-5 text-green-700 border-green-600"
+                {% else %}
+                  class="border-b-2 inline-flex pb-5 hover:text-green-700 hover:border-green-600 border-transparent transition-all"
+                {% endif %}
+        >{{ nav.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

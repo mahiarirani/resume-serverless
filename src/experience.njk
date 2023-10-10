@@ -1,0 +1,73 @@
+---
+layout: resume
+type: section
+eleventyNavigation:
+  key: experince
+  title: Experince
+  order: 1
+---
+
+<h2 class="font-semibold text-xl mb-5">{{ eleventyNavigation.title }}</h2>
+
+{% for experince in experinces %}
+  <div class="sm:flex sm:justify-start sm:space-y-0 sm:space-x-4 space-y-4">
+    <div>
+      <a href="{{ experince.url | url }}" target="_blank">
+        <div class="flex w-16 h-16 bg-gradient-to-br {{ experince.logo.background.from }} {{ experince.logo.background.to }} justify-center items-center rounded-xl  overflow-hidden">
+          <img src="/assets/images/logo/{{ experince.logo.src }}" alt="{{ experince.company }} Logo"
+               class="w-16 h-auto {{ experince.logo.padding }}">
+        </div>
+      </a>
+    </div>
+    <div class="w-full space-y-5">
+      <div class="sm:flex sm:justify-between sm:space-y-0 space-y-4">
+        <div class="space-y-2">
+          <div class="font-medium">{{ experince.role }}</div>
+          <div class="flex space-x-5">
+            <a href="{{ experince.url | url }}" target="_blank">
+              <div class="flex text-gray-600 items-center text-sm font-medium space-x-1.5">
+                <i class="bx bxs-briefcase text-sm"></i>
+                <span>{{ experince.company }}</span>
+              </div>
+            </a>
+            <div class="flex text-gray-500 items-center text-sm font-medium space-x-1.5">
+              <i class="bx bxs-map text-sm" type="solid"></i>
+              <span class="text-gray-500">{{ experince.location }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-2 sm:text-right">
+          <div class="inline-flex rounded-full py-0.5 capitalize px-2 text-xs
+            {% if experince.fullAvailability %}
+              text-green-600 bg-green-100
+            {% else %}
+              text-yellow-600 bg-yellow-100
+            {% endif %}">
+            {{ "Full" if experince.fullAvailability else "Part" }} Time
+          </div>
+          <div class="flex text-gray-600 items-center text-sm font-medium space-x-1.5">
+            <i class="bx bxs-calendar text-sm"></i>
+            <span>{{ experince.from }} – {{ experince.to }}</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-600">
+          {{ experince.description }}
+        </p>
+        <ol class="list-disc list-inside sm:list-outside text-gray-500 mt-3 space-y-1">
+          {% for responsibility in experince.responsibilities %}
+            <li>{{ responsibility }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+      <div>
+        {% from "components/skills.njk" import render %}
+        {{ render(experince.skills) }}
+      </div>
+      {% if not loop.last %}
+        <div class="border-b border-gray-200"></div>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}

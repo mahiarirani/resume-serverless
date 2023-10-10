@@ -1,0 +1,32 @@
+name: John Doe
+title: Senior Software Engineer
+picture: profile.png
+email: john.doe@example.com
+phone: +1234567890
+location: New York City
+experience: 8+ years
+availability: 2 Weeks
+available: true
+relocation: false
+remote: true
+about: >
+  I am a seasoned software engineer with more than eight years of experience in developing cutting-edge software solutions. 
+  My passion for coding and my curiosity for emerging technologies drive me to excel in creative problem-solving. I am committed 
+  to delivering innovative solutions, optimizing performance, and collaborating effectively in diverse environments.
+languages:
+  - name: English
+    level: Fluent
+  - name: Spanish
+    level: Intermediate
+  - name: French
+    level: Basic
+socials:
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/johndoe/
+    icon: bxl-linkedin
+  - name: GitHub
+    url: https://github.com/johndoe
+    icon: bxl-github
+  - name: Twitter
+    url: https://twitter.com/johndoe
+    icon: bxl-twitter

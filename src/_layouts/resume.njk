@@ -1,0 +1,27 @@
+---
+layout: base
+---
+<div class="grid gap-5 lg:grid-cols-3">
+  <!-- Left Side -->
+  <aside class="space-y-5">
+    {% include "blocks/user.njk" %}
+    {% include "blocks/contact.njk" %}
+    {% include "blocks/info.njk" %}
+    {% include "blocks/languages.njk" %}
+  </aside>
+  <!-- Right Side -->
+  <section class="space-y-5 lg:col-span-2">
+    {% include "blocks/about.njk" %}
+    {% if type == "section" %}
+      <section class="p-7 inline-grid w-full bg-white rounded-xl shadow space-y-5">
+        {{ content | safe }}
+      </section>
+    {% elseif type == "article" %}
+      <article class="p-7 inline-grid w-full bg-white rounded-xl shadow prose max-w-full">
+        {{ content | safe }}
+      </article>
+    {% else %}
+      {{ content | safe }}
+    {% endif %}
+  </section>
+</div>

@@ -1,0 +1,34 @@
+---
+layout: resume
+type: section
+eleventyNavigation:
+  key: skills
+  title: Skills
+  order: 3
+---
+<h2 class="font-semibold text-xl mb-5">{{ eleventyNavigation.title }}</h2>
+
+{% for skill in skills %}
+  <div class="sm:flex sm:justify-start sm:space-y-0 sm:space-x-4 space-y-4">
+    <div class="flex w-16 h-16 bg-gradient-to-br from-lime-100 to-green-300 justify-center items-center rounded-xl">
+            <span class="w-16 text-3xl text-green-800 text-center">
+              <i class="bx {{ skill.icon }}"></i>
+            </span>
+    </div>
+
+    <div class="w-full space-y-5">
+      <div class="items-end sm:flex justify-between space-y-1">
+        <div class="space-y-2">
+          <div class="font-medium">{{ skill.category }}</div>
+        </div>
+      </div>
+      <div>
+        {% from 'components/skills.njk' import render %}
+        {{ render(skill.items, tags) }}
+      </div>
+      {% if not loop.last %}
+        <div class="border-b border-gray-200"></div>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}

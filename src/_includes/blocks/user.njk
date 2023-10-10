@@ -1,0 +1,22 @@
+<section class="shadow rounded-xl overflow-hidden">
+  <div class="h-36 bg-gradient-to-br from-gray-600 to-green-800">
+  </div>
+  <div class="pt-14 p-7 bg-white relative">
+    <span class="absolute top-4 right-7 text-white uppercase text-xs font-semibold rounded-full px-3 py-1 bg-gray-500
+      {{ "shadow-green-700" if information.available else "shadow-amber-700" }} shadow-[0_0_0.3rem_0.1rem] cursor-pointer">
+      {{ "Available" if information.available else "Unavailble" }}
+    </span>
+    <a href="/">
+      <img src="/assets/images/{{ information.picture }}" alt="{{ information.name }}"
+           class="absolute -top-28 w-40 h-40 border-2 rounded-xl bg-gradient-to-br from-green-100 to-lime-100">
+    </a>
+    <div class="text-2xl font-semibold mb-1.5">{{ information.name }}</div>
+    <div class="text-md text-gray-500 mb-7">{{ information.title }}</div>
+    <button class="flex justify-between items-center bg-green-600 hover:bg-green-700 w-full h-14 text-white rounded-xl transition-all group">
+      <span class="px-5 font-semibold">Download CV</span>
+      <span class="flex bg-green-700 rounded-r-xl h-full items-center">
+        <i class="bx bx-download text-2xl px-5 py-3 group-hover:animate-[tada_2s_ease-in-out_1]"></i>
+      </span>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+---
+- university: Alpha University
+  url: https://www.alphauniversity.edu
+  location: Fictionville
+  logo:
+    src: education-1.svg
+    padding: p-2
+    background:
+      from: from-blue-200
+      to: to-purple-200
+  degree: Master
+  field: Quantum Computing
+  gpa: 3.90
+  from: 2020
+  to: 2023
+  notes:
+    - body: |
+        Conducted research on quantum entanglement and its applications in secure communication. Published findings in a scientific journal.
+      link:
+        url: https://www.example.com/journal/quantum-paper
+        text: Research Paper
+    - body: |
+        Developed a quantum algorithm for factorizing large numbers, demonstrating its potential impact on cryptography.
+  skills:
+    - Python
+    - Qiskit
+    - Quantum Algorithms
+    - LaTeX
+    - Linux
+    - Git
+- university: Beta College
+  url: http://www.betacollege.edu
+  location: Science City
+  logo:
+    src: education-2.svg
+    padding: p-2
+    background:
+      from: from-violet-100
+      to: to-rose-300
+  degree: Bachelor
+  field: Artificial Intelligence
+  gpa: 3.75
+  from: 2018
+  to: 2020
+  notes:
+    - body: |
+        Participated in an AI hackathon and developed a chatbot that won the first prize.
+    - body: |
+        Created a recommendation system using machine learning for a local e-commerce startup.
+    - body: |
+        Implemented a computer vision project for object detection and recognition.
+  skills:
+    - Python
+    - TensorFlow
+    - Machine Learning
+    - Computer Vision
+    - Java
+    - Data Mining
+- university: Gamma Institute
+  url: https://www.gammainstitute.edu
+  location: Fantasy Town
+  logo:
+    src: education-3.svg
+    padding: p-3
+    background:
+      from: from-amber-100
+      to: to-gray-300
+  degree: Associate
+  field: Web Development
+  gpa: 3.80
+  from: 2016
+  to: 2018
+  notes:
+    - body: |
+        Developed a fully functional e-commerce website for a local business using PHP and MySQL.
+    - body: |
+        Designed and implemented a responsive web application using HTML, CSS, and JavaScript.
+    - body: |
+        Created a personal blog with a custom CMS built with Laravel.
+  skills:
+    - PHP
+    - HTML
+    - CSS
+    - JavaScript
+    - Laravel
+    - MySQL

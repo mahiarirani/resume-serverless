@@ -1,0 +1,114 @@
+---
+- company: XYZ Tech Solutions
+  url: https://xyztechsolutions.com/
+  logo:
+    src: experience-1.svg
+    padding: p-3
+    background:
+      from: from-indigo-100
+      to: to-violet-300
+  location: San Francisco, USA
+  role: Software Engineer
+  fullAvailability: true
+  from: Jan 2020
+  to: Present
+  description: Working as a software engineer at XYZ Tech Solutions, specializing in developing cutting-edge solutions for clients in various industries.
+  responsibilities:
+    - Developing scalable web applications and APIs using Python and Django.
+    - Collaborating with cross-functional teams to design and implement complex features.
+    - Conducting code reviews and ensuring code quality through rigorous testing.
+    - Implementing CI/CD pipelines for automated deployment and testing.
+    - Utilizing AWS services for cloud-based solutions.
+  skills:
+    - Python
+    - Django
+    - JavaScript
+    - React
+    - REST API
+    - AWS
+    - Docker
+    - CI/CD
+    - Git
+
+- company: AlphaSoft
+  url: https://alphasoft.com/
+  logo:
+    src: experience-2.svg
+    padding: p-3
+    background:
+      from: from-yellow-50
+      to: to-amber-300
+  location: New York, USA
+  role: Frontend Developer
+  fullAvailability: false
+  from: March 2018
+  to: May 2019
+  description: Worked as a frontend developer at AlphaSoft, contributing to the development of web applications and user interfaces.
+  responsibilities:
+    - Building responsive and user-friendly web interfaces using HTML, CSS, and JavaScript.
+    - Collaborating with backend developers to integrate frontend components with APIs.
+    - Conducting performance optimization for web applications.
+    - Implementing and maintaining version control using Git.
+  skills:
+    - HTML
+    - CSS
+    - JavaScript
+    - React
+    - Frontend Development
+    - Git
+
+- company: Beta Analytics
+  url: https://betaanalytics.com/
+  logo:
+    src: experience-3.svg
+    padding: p-3
+    background:
+      from: from-blue-100
+      to: to-indigo-300
+  location: Chicago, USA
+  role: Data Analyst
+  fullAvailability: true
+  from: June 2017
+  to: Dec 2019
+  description: Worked as a data analyst at Beta Analytics, where I played a crucial role in data-driven decision-making processes.
+  responsibilities:
+    - Collecting, cleaning, and analyzing large datasets.
+    - Creating data visualizations and reports to communicate insights.
+    - Collaborating with cross-functional teams to identify business opportunities.
+    - Developing and maintaining SQL queries and data pipelines.
+  skills:
+    - Data Analysis
+    - SQL
+    - Data Visualization
+    - Python
+    - Excel
+    - Statistical Analysis
+    - Business Intelligence
+
+- company: Gamma Innovations
+  url: http://gammainnovations.com/
+  logo:
+    src: experience-4.svg
+    padding: p-3
+    background:
+      from: from-gray-300
+      to: to-orange-300
+  location: Los Angeles, USA
+  role: UX Designer
+  fullAvailability: true
+  from: Aug 2015
+  to: Jan 2017
+  description: Worked as a UX designer at Gamma Innovations, focusing on creating intuitive and user-centered design solutions.
+  responsibilities:
+    - Conducting user research and usability testing.
+    - Designing wireframes, prototypes, and user interfaces.
+    - Collaborating with developers to ensure the implementation of design concepts.
+    - Iteratively improving designs based on user feedback.
+  skills:
+    - UX Design
+    - User Research
+    - Wireframing
+    - Prototyping
+    - Usability Testing
+    - Adobe XD
+    - Sketch

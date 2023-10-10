@@ -1,0 +1,72 @@
+---
+layout: resume
+type: section
+eleventyNavigation:
+  key: education
+  title: Education
+  order: 2
+---
+
+<h2 class="font-semibold text-xl mb-5">{{ eleventyNavigation.title }}</h2>
+
+{% for education in educations %}
+  <div>
+    <div class="sm:flex items-start space-y-4 sm:space-y-0 sm:space-x-4">
+      <a href="{{ education.url | url }}" target="_blank">
+        <div class="flex items-center bg-gradient-to-br {{ education.logo.background.from }} {{ education.logo.background.to }} w-16 h-16 rounded-xl drop overflow-hidden">
+          <img src="/assets/images/logo/{{ education.logo.src }}" class="{{ education.logo.padding }}"
+               alt="{{ education.university }}">
+        </div>
+      </a>
+      <div class="w-full space-y-7">
+        <div class="item-header items-end sm:flex justify-between space-y-1">
+          <div class="space-y-2">
+            <div class="font-medium whitespace-nowrap">{{ education.degree }} in {{ education.field }}</div>
+            <div>
+              <a href="{{ education.url | url }}" target="_blank">
+                <div class="flex text-gray-600 items-center text-sm font-medium space-x-1.5">
+                  <i class="bx bxs-graduation text-sm"></i>
+                  <span>{{ education.university }}</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="flex space-x-4 flex-wrap justify-start sm:justify-end">
+            <div class="flex text-gray-500 items-center text-sm font-medium space-x-1.5">
+              <i class="bx bxs-certification text-sm"></i>
+              <span>{{ education.gpa }}</span>
+            </div>
+            <div class="flex text-gray-500 items-center text-sm font-medium space-x-1.5">
+              <i class="bx bxs-map text-sm"></i>
+              <span>{{ education.location }}</span>
+            </div>
+            <div class="flex text-gray-500 items-center text-sm font-medium space-x-1.5">
+              <i class="bx bxs-calendar text-sm"></i>
+              <span class="whitespace-nowrap">{{ education.from }} - {{ education.to }}</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ol class="list-disc text-gray-600 space-y-1">
+            {% for note in education.notes %}
+              <li>
+                {{ note.body }}
+                {% if note.link %}
+                  <a href="{{ note.link.url | url }}" class="whitespace-nowrap text-green-700">[{{ note.link.text }}
+                    ]</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+        <div>
+          {% from "components/skills.njk" import render %}
+          {{ render(education.skills) }}
+        </div>
+        {% if not loop.last %}
+          <div class="border-b border-gray-200"></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
