@@ -3,6 +3,10 @@
 Welcome to the "resume-serverless" web application template, powered by Tailwind CSS, Nunjucks templating, and the 11ty
 static site generator.
 
+## Live Demo
+
+[https://mahiarirani.github.io/resume-serverless/](https://mahiarirani.github.io/resume-serverless/)
+
 ## Overview
 
 The "resume-serverless" app template provides a solid foundation for building your web-based resume or personal
