@@ -21,7 +21,7 @@ type: blog
     </a>
   </div>
   <div class="flex items-center max-h-96 rounded-t-xl overflow-hidden bg-gradient-to-br from-lime-100 to-green-300">
-    <img src="/assets/images/blog/{{ post.data.image.filename }}"
+    <img src="{{ ( "/assets/images/blog/" + post.data.image.filename ) | url }}"
          class="w-full h-full object-cover object-center">
   </div>
   <div class="space-y-7 mb-5 p-7 w-full">

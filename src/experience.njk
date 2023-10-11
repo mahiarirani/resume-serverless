@@ -14,7 +14,7 @@ eleventyNavigation:
     <div>
       <a href="{{ experince.url | url }}" target="_blank">
         <div class="flex w-16 h-16 bg-gradient-to-br {{ experince.logo.background.from }} {{ experince.logo.background.to }} justify-center items-center rounded-xl  overflow-hidden">
-          <img src="/assets/images/logo/{{ experince.logo.src }}" alt="{{ experince.company }} Logo"
+          <img src="{{ ( "/assets/images/logo/" + experince.logo.src ) | url }}" alt="{{ experince.company }} Logo"
                class="w-16 h-auto {{ experince.logo.padding }}">
         </div>
       </a>

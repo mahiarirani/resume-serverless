@@ -14,7 +14,7 @@ eleventyNavigation:
     <div class="sm:flex items-start space-y-4 sm:space-y-0 sm:space-x-4">
       <a href="{{ education.url | url }}" target="_blank">
         <div class="flex items-center bg-gradient-to-br {{ education.logo.background.from }} {{ education.logo.background.to }} w-16 h-16 rounded-xl drop overflow-hidden">
-          <img src="/assets/images/logo/{{ education.logo.src }}" class="{{ education.logo.padding }}"
+          <img src="{{ ( "/assets/images/logo/" + education.logo.src ) | url }}" class="{{ education.logo.padding }}"
                alt="{{ education.university }}">
         </div>
       </a>
