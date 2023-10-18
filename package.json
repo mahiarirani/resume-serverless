@@ -4,8 +4,8 @@
   "description": "a resume / cv template",
   "author": "Mahyar Iranibazaz",
   "scripts": {
-    "dev": "rm -rf dist && eleventy && mkdir dist/assets/css && postcss tailwind.css > dist/assets/css/style.css && eleventy --serve",
-    "build": "rm -rf dist && eleventy && mkdir dist/assets/css && NODE_ENV=production postcss tailwind.css > dist/assets/css/style.css"
+    "dev": "rm -rf dist && eleventy --serve & npx tailwindcss -i tailwind.css -o dist/assets/css/style.css --watch",
+    "build": "rm -rf dist && ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss tailwind.css -o dist/assets/css/style.css"
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
