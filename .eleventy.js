@@ -4,8 +4,10 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const eleventyDirectoryOutput = require('@11ty/eleventy-plugin-directory-output');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addWatchTarget('./tailwind.config.js');
+  eleventyConfig.addWatchTarget('./tailwind.css');
   eleventyConfig.setQuietMode(true);
-  eleventyConfig.addPassthroughCopy('./src/assets/images');
+  eleventyConfig.addPassthroughCopy('./src/assets');
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents))
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyDirectoryOutput, {
