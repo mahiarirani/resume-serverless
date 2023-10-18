@@ -6,7 +6,7 @@
       {{ "shadow-green-700" if information.available else "shadow-amber-700" }} shadow-[0_0_0.3rem_0.1rem] cursor-pointer">
       {{ "Available" if information.available else "Unavailble" }}
     </span>
-    <a href="/">
+    <a href="{{ "/" | url }}">
       <img src="{{ ("/assets/images/" + information.picture) | url }}" alt="{{ information.name }}"
            class="absolute -top-28 w-40 h-40 border-2 rounded-xl bg-gradient-to-br from-green-100 to-lime-100">
     </a>
