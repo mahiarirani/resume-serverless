@@ -1,6 +1,7 @@
 ---
-title: Mahyar Iranibazaz
-subtitle: Resume
+eleventyComputed:
+  title: '{{ information.name }}'
+  subtitle: '{{ eleventyNavigation.title }}'
 ---
 <!DOCTYPE html>
 <html lang="en" data-lt-installed="true">
@@ -10,7 +11,7 @@ subtitle: Resume
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | url }}">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>{{ title }} | {{ eleventyNavigation.title or subtitle }}</title>
+  <title>{{ title }}{{ " | " + subtitle if subtitle }}</title>
 </head>
 <body class="bg-gray-100 antialiased">
 <main class="container mx-auto p-4 sm:px-5 md:my-5 max-w-full lg:max-w-5xl">
