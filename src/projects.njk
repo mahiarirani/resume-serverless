@@ -6,7 +6,9 @@ eleventyNavigation:
   title: Projects
   order: 4
 ---
+
 <h2 class="font-semibold text-xl mb-5">{{ eleventyNavigation.title }}</h2>
+
 {% for project in projects %}
   <div class="sm:flex sm:justify-start sm:space-y-0 sm:space-x-4 space-y-4">
     <div class="flex w-16 h-16 bg-gradient-to-br {{ project.icon.background.from }} {{ project.icon.background.to }} justify-center items-center rounded-xl">
