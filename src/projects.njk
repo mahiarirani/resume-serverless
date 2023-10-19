@@ -35,6 +35,7 @@ eleventyNavigation:
         {% from 'components/skills.njk' import render %}
         {{ render(project.skills) }}
       </div>
+      {% if project.links %}
       <div class="space-x-2">
         {% for link in project.links %}
           <a href="{{ link.url }}" target="_blank"
@@ -44,6 +45,7 @@ eleventyNavigation:
           </a>
         {% endfor %}
       </div>
+      {% endif %}
       {% if not loop.last %}
         <div class="border-b border-gray-200"></div>
       {% endif %}
