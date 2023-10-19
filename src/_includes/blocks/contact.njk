@@ -2,12 +2,12 @@
   <h2 class="font-semibold text-xl mb-5">Contact</h2>
   <div class="flex flex-col space-y-2">
     <a href="mailto:{{ information.email }}"
-       class="flex items-center text-green-600 hover:text-green-700 transition-all space-x-2">
+       class="flex items-center text-{{ theme.color.primary }}-600 hover:text-{{ theme.color.primary }}-700 transition-all space-x-2">
       <i class="bx bx-envelope text-xl"></i>
       <span>{{ information.email }}</span>
     </a>
     <a href="tel:{{ information.phone }}"
-       class="flex items-center text-green-600 hover:text-green-700 transition-all space-x-2 tracking-wide align-middle">
+       class="flex items-center text-{{ theme.color.primary }}-600 hover:text-{{ theme.color.primary }}-700 transition-all space-x-2 tracking-wide align-middle">
       <i class="bx bx-phone text-xl"></i>
       <span>{{ information.phone }}</span>
     </a>
@@ -15,7 +15,7 @@
   <ul class="flex space-x-2 mt-4">
     {% for social in information.socials %}
       <li>
-        <a href="{{ social.url | url }}" class="hover:text-green-700 transition-all p-1"
+        <a href="{{ social.url | url }}" class="hover:text-{{ theme.color.primary }}-700 transition-all p-1"
            target="_blank">
           <i class="bx {{ social.icon }} text-2xl"></i>
         </a>

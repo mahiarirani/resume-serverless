@@ -62,8 +62,8 @@ eleventyNavigation:
         </ol>
       </div>
       <div>
-        {% from "components/skills.njk" import render %}
-        {{ render(experince.skills) }}
+        {% import "components/skills.njk" as skills %}
+        {{ skills.render(experince.skills, defaultColor = theme.color.primary) }}
       </div>
       {% if not loop.last %}
         <div class="border-b border-gray-200"></div>

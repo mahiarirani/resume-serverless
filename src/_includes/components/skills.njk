@@ -1,4 +1,4 @@
-{% macro render(skills, tags) %}
+{% macro render(skills, tags, defaultColor) %}
   <div class="-m-2 flex flex-wrap">
     {% for skill in skills %}
       {% if tags %}
@@ -9,7 +9,7 @@
           {% endif %}
         {% endfor %}
       {% endif %}
-      <span class="bg-{{ color or "green" }}-100 text-{{ color or "green" }}-700 cursor-default rounded-lg m-1 px-2 py-1 flex align-middle space-x-1">
+      <span class="bg-{{ color or defaultColor }}-100 text-{{ color or defaultColor }}-700 cursor-default rounded-lg m-1 px-2 py-1 flex align-middle space-x-1">
         {% if skill.icon %}
           <i class="bx {{ skill.icon }} text-lg before:align-text-top"></i>
         {% endif %}

@@ -6,9 +6,9 @@
         <a href="{{ nav.url | url }}"
            class="sm:border-b-2 inline-flex pb-5
                 {% if nav.url == page.url %}
-                  text-green-700 border-green-600 font-semibold sm:font-normal
+                  text-{{ theme.color.primary }}-700 border-{{ theme.color.primary }}-600 font-semibold sm:font-normal
                 {% else %}
-                  hover:text-green-700 hover:border-green-600 border-transparent
+                  hover:text-{{ theme.color.primary }}-700 hover:border-{{ theme.color.primary }}-600 border-transparent
                 {% endif %}
                   transition-all"
         >{{ nav.title }}</a>

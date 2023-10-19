@@ -52,16 +52,18 @@ eleventyNavigation:
               <li>
                 {{ note.body }}
                 {% if note.link %}
-                  <a href="{{ note.link.url | url }}" class="whitespace-nowrap text-green-700">[{{ note.link.text }}
-                    ]</a>
+                  <a href="{{ note.link.url | url }}"
+                     class="whitespace-nowrap text-{{ theme.color.primary }}-600 hover:text-{{ theme.color.primary }}-700">
+                    [{{ note.link.text }}]
+                  </a>
                 {% endif %}
               </li>
             {% endfor %}
           </ol>
         </div>
         <div>
-          {% from "components/skills.njk" import render %}
-          {{ render(education.skills) }}
+          {% import "components/skills.njk" as skills %}
+          {{ skills.render(education.skills, defaultColor = theme.color.primary) }}
         </div>
         {% if not loop.last %}
           <div class="border-b border-gray-200"></div>
