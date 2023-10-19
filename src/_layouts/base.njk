@@ -22,7 +22,6 @@ eleventyComputed:
   {{ content | safe }}
   {% include 'components/footer.njk' %}
 </main>
-</body>
 <script>
     window.addEventListener('scroll', function () {
         localStorage.top = window.scrollY;
@@ -31,4 +30,5 @@ eleventyComputed:
         window.scrollTo({top: localStorage.top || 0, behavior: 'smooth'});
     })
 </script>
+</body>
 </html>
