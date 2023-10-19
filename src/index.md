@@ -1,6 +1,9 @@
 ---
 layout: resume
 type: article
+eleventyNavigation:
+  key: Home
+  order: 0
 ---
 
 ### Greetings, I'm not your typical developer 🚀
