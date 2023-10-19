@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/resume-serverless/assets/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resume-serverless/assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resume-serverless/assets/icon/favicon-16x16.png">
+  <link rel="manifest" href="/resume-serverless/assets/icon/site.webmanifest">
   <link rel="stylesheet" href="/resume-serverless/assets/css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>John Doe | Mastering the Art of Web Development: A Journey Through the Digital Realm</title>
@@ -14,21 +18,21 @@
   
   <a href="/resume-serverless/blog/"
      class=" absolute flex justify-center items-center p-3 left-8 top-6 rounded-full bg-white/70 hover:bg-white/100 transition group">
-    <i class="bx bx-arrow-back text-2xl sm:text-3xl text-gray-600 group-hover:text-green-700"></i>
+    <i class="bx bx-arrow-back text-2xl sm:text-3xl text-gray-600 group-hover:text-purple-700"></i>
   </a>
   <div class="absolute bg-white/60 right-0 top-96 -translate-y-8 h-8 rounded-tl-xl text-gray-600 px-3 p-1 inline-flex space-x-1 items-center text-sm cursor-default hover:bg-white/90 hover:text-gray-700 transition group">
     <span>Photo by</span>
     <a href="https://unsplash.com/@lifeof_peter_?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash"
-       class="text-gray-800 group-hover:text-green-700">
+       class="text-gray-800 group-hover:text-purple-700">
       Peter Thomas
     </a>
     <span>on</span>
     <a href="https://unsplash.com/photos/a-room-filled-with-lots-of-green-plants-next-to-a-window-AR1cd7bjPiA?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash"
-       class="text-gray-800 group-hover:text-green-700">
+       class="text-gray-800 group-hover:text-purple-700">
       Unsplash
     </a>
   </div>
-  <div class="flex items-center max-h-96 rounded-t-xl overflow-hidden bg-gradient-to-br from-lime-100 to-green-300">
+  <div class="flex items-center max-h-96 rounded-t-xl overflow-hidden bg-gradient-to-br from-lime-100 to-purple-300">
     <img src="/resume-serverless/assets/images/blog/peter-thomas-AR1cd7bjPiA-unsplash.jpg"
          class="w-full h-full object-cover object-center">
   </div>
@@ -101,7 +105,7 @@ we'll master the art of crafting exceptional websites and making an impact in th
     </div>
   </div>
 </article>
-  <footer class="text-center text-gray-700 mt-5 sm:-mb-4 flex justify-center items-center space-x-2">
+  <footer class="text-center text-gray-700 mt-5 sm:-mb-4 flex justify-center items-center space-x-2 px-8">
   <p class="cursor-default">
     Made with ❤️ using
     <a href="https://tailwindcss.com/">Tailwind</a>,
@@ -116,4 +120,12 @@ we'll master the art of crafting exceptional websites and making an impact in th
 </footer>
 </main>
 </body>
+<script>
+    window.addEventListener('scroll', function () {
+        localStorage.top = window.scrollY;
+    })
+    window.addEventListener('load',function () {
+        window.scrollTo({top: localStorage.top || 0, behavior: 'smooth'});
+    })
+</script>
 </html>
