@@ -3,26 +3,26 @@ layout: base
 type: blog
 ---
 <article class="w-full relative bg-white rounded-xl shadow max-w-full">
-  {% set link = collections.all | eleventyNavigation | where("key", "blog") %}
-  <a href="{{ link.url | url }}"
-     class=" absolute flex justify-center items-center p-3 left-8 top-6 rounded-full bg-white/70 hover:bg-white/100 transition group">
-    <i class="bx bx-arrow-back text-2xl sm:text-3xl text-gray-600 group-hover:text-{{ theme.color.primary }}-700"></i>
-  </a>
-  <div class="absolute bg-white/60 right-0 top-96 -translate-y-8 h-8 rounded-tl-xl text-gray-600 px-3 p-1 inline-flex space-x-1 items-center text-sm cursor-default hover:bg-white/90 hover:text-gray-700 transition group">
-    <span>Photo by</span>
-    <a href="{{ post.data.image.author.url | url }}"
-       class="text-gray-800 group-hover:text-{{ theme.color.primary }}-700">
-      {{ post.data.image.author.name }}
+  <div class="flex relative items-center max-h-96 rounded-t-xl overflow-hidden bg-gradient-to-br from-lime-100 to-green-300">
+    {% set link = collections.all | eleventyNavigation | where("key", "blog") %}
+    <a href="{{ link.url | url }}"
+       class=" absolute flex justify-center items-center p-3 left-8 top-6 rounded-full bg-white/70 hover:bg-white/100 transition group">
+      <i class="bx bx-arrow-back text-2xl sm:text-3xl text-gray-600 group-hover:text-{{ theme.color.primary }}-700"></i>
     </a>
-    <span>on</span>
-    <a href="{{ post.data.image.source.url | url }}"
-       class="text-gray-800 group-hover:text-{{ theme.color.primary }}-700">
-      {{ post.data.image.source.name }}
-    </a>
-  </div>
-  <div class="flex items-center max-h-96 rounded-t-xl overflow-hidden bg-gradient-to-br from-lime-100 to-{{ theme.color.primary }}-300">
+    <div class="absolute bg-gray-500/40 right-0 bottom-0 rounded-tl-xl text-gray-500 px-3 py-1 inline-flex space-x-1 items-center text-xs sm:text-sm cursor-default hover:bg-white/90 hover:text-gray-700 transition group">
+      <span>Photo by</span>
+      <a href="{{ post.data.image.author.url | url }}"
+         class="text-gray-400 group-hover:text-{{ theme.color.primary }}-700">
+        {{ post.data.image.author.name }}
+      </a>
+      <span>on</span>
+      <a href="{{ post.data.image.source.url | url }}"
+         class="text-gray-400 group-hover:text-{{ theme.color.primary }}-700">
+        {{ post.data.image.source.name }}
+      </a>
+    </div>
     <img src="{{ ( "/assets/images/blog/" + post.data.image.filename ) | url }}"
-         class="w-full h-full object-cover object-center">
+         class="w-full h-full object-cover object-center" alt="{{ post.data.title }}">
   </div>
   <div class="space-y-7 mb-5 p-7 w-full">
     <div class="space-y-2">
