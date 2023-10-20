@@ -1,6 +1,9 @@
 ---
 layout: resume
 type: article
+keywords:
+  - Biography
+  - About
 eleventyNavigation:
   key: Home
   order: 0
