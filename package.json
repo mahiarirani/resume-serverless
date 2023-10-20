@@ -13,6 +13,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
+    "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "luxon": "^3.4.3",
     "node-fetch": "^3.3.2",

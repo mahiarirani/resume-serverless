@@ -1,5 +1,6 @@
 const yaml = require('js-yaml');
 const {DateTime} = require('luxon');
+const { minify } = require("html-minifier");
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const eleventyDirectoryOutput = require('@11ty/eleventy-plugin-directory-output');
 
@@ -22,6 +23,14 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addFilter('where', (arr, key, value) => {
     return arr.filter(item => item[key] === value)[0];
+  });
+  eleventyConfig.addTransform("minify", function (content) {
+    return (this.page.outputPath && this.page.outputPath.endsWith(".html")) ?
+        minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        }) : content;
   });
   return {
     markdownTemplateEngine: 'njk',
