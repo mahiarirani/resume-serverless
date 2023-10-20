@@ -11,6 +11,14 @@ eleventyComputed:
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}{{ " | " + subtitle if subtitle }}</title>
+  <!-- SEO -->
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="keywords" content="{{ site.keywords | join(', ')}}, {{ keywords | join(', ') if keywords }}{{ post.data.tags  | join(', ') if post }}">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="google" content="notranslate">
+  <meta name="generator" content="Eleventy">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icon/apple-touch-icon.png" | url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/icon/favicon-32x32.png" | url }}">
