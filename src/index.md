@@ -1,5 +1,5 @@
 ---
-layout: resume
+layout: main
 type: article
 keywords:
   - Biography

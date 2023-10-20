@@ -1,6 +1,8 @@
 window.addEventListener('scroll', function () {
-    localStorage.top = window.scrollY;
+    if (document.getElementsByClassName('keep-scroll').length)
+        localStorage.top = window.scrollY;
 })
 window.addEventListener('load', function () {
-    window.scrollTo({top: localStorage.top || 0, behavior: 'smooth'});
+    if (document.getElementsByClassName('keep-scroll').length)
+        window.scrollTo({top: localStorage.top || 0, behavior: 'smooth'});
 })
