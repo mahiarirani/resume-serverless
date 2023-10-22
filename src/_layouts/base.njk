@@ -12,6 +12,7 @@ eleventyComputed:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}{{ " | " + subtitle if subtitle }}</title>
   <!-- SEO -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
   <meta name="keywords" content="{{ site.keywords | join(', ')}}, {{ keywords | join(', ') if keywords }}{{ post.data.tags  | join(', ') if post }}">
