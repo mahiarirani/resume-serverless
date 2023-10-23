@@ -5,6 +5,7 @@ pagination:
   data: collections.posts
   size: 1
   alias: post
+  addAllPagesToCollections: true
 permalink: 'blog/{{post.data.title | slugify }}/'
 eleventyComputed:
   eleventyNavigation:

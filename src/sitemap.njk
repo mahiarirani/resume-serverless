@@ -5,12 +5,20 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in collections.all %}
-    {% if not page.data.draft %}
-      <url>
-        <loc>{{ site.url }}{{ page.url | url }}</loc>
-        <lastmod>{{ page.date.toISOString() }}</lastmod>
-        <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
-      </url>
+    {% if not page.data.draft and page.url %}
+      {% if page.data.pagination %}
+        <url>
+          <loc>{{ site.url }}{{ page.data.pagination.hrefs[page.pageNumber] | url }}</loc>
+          <lastmod>{{ page.data.pagination.pages[page.pageNumber].data.date.toISOString() }}</lastmod>
+          <changefreq>{{ page.data.pagination.pages[page.pageNumber].data.changeFreq if page.data.pagination.pages[page.pageNumber].data.changeFreq else "monthly" }}</changefreq>
+        </url>
+      {% else %}
+        <url>
+          <loc>{{ site.url }}{{ page.url | url }}</loc>
+          <lastmod>{{ page.date.toISOString() }}</lastmod>
+          <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+        </url>
+      {% endif %}
     {% endif %}
   {% endfor %}
 </urlset>
