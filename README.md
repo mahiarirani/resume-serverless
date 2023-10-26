@@ -1,5 +1,12 @@
 # ✨ resume-serverless ✨
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mahiarirani/resume-serverless/pipeline.yml?style=for-the-badge&logo=github-actions&logoColor=white)
+![11ty](https://img.shields.io/badge/Eleventy-000000?style=for-the-badge&logo=eleventy&logoColor=white)
+![Tailwinds](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![PostCSS](https://img.shields.io/badge/Postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)
+![Nunjucks](https://img.shields.io/badge/Nunjucks-1C4913?style=for-the-badge&logo=nunjucks&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-FFFFFF?style=for-the-badge&logo=markdown&logoColor=black)
+
 Welcome to the "resume-serverless" web application template, powered by Tailwind CSS, Nunjucks templating, and the 11ty
 static site generator.
 
