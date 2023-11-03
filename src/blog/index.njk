@@ -26,7 +26,8 @@ eleventyNavigation:
         </p>
       </div>
       <div class="flex items-center max-h-80 overflow-hidden">
-        <img src="{{ ( "/assets/images/blog/" + post.image.filename ) | url }}" alt="" class="object-cover object-center w-full h-full">
+        <img src="{{ ( "/assets/images/blog/" + post.image.filename ) | url }}" alt="Image for {{ post.title }}"
+             class="object-cover object-center w-full h-full">
       </div>
     </article>
   </a>
